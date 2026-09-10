@@ -2,8 +2,9 @@
 const themeToggle = document.getElementById("themeToggle");
 const html = document.documentElement;
 
-const savedTheme = localStorage.getItem("theme") || 
-  (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+// const savedTheme = localStorage.getItem("theme") || 
+//   (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+const savedTheme = localStorage.getItem("theme") || "light";
 
 html.setAttribute("data-theme", savedTheme);
 updateThemeIcon(savedTheme);
